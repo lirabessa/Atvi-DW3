@@ -47,7 +47,7 @@ public class EnderecoControle {
 		atualizador.atualizar(endereco, atualizacao);
 		repositorio.save(endereco);	
 	}
-	@DeleteMapping("excluir")
+	@DeleteMapping("/excluir")
 	private void excluirEndereco(@RequestBody Endereco exclusao) {
 		Endereco endereco = repositorio.getById(exclusao.getId());
 		repositorio.delete(endereco);

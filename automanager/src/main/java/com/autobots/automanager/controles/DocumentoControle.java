@@ -47,7 +47,7 @@ public class DocumentoControle {
 		repositorio.save(documento);
 	}
 	
-	@DeleteMapping("excluir")
+	@DeleteMapping("/excluir")
 	public void excluirDocumento(@RequestBody Documento exclusao) {
 		Documento documento = repositorio.getById(exclusao.getId());
 		repositorio.delete(documento);
